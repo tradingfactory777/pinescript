@@ -4,33 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>프로젝트 3 상세 | 파인스크립트 제작 서비스</title>
-    <meta name="description" content="볼린저밴드와 스토캐스틱을 활용한 자동 매매 시스템 상세 설명. 복잡한 시장 상황에서도 자동으로 거래를 실행하는 솔루션입니다.">
+    <meta name="description" content="복합 지표(볼린저밴드, 스토캐스틱)와 피라미딩 전략을 결합한 자동 매매 시스템입니다.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>프로젝트 3</h1>
-        <p>볼린저밴드와 스토캐스틱을 활용한 자동 매매 시스템</p>
+        <p>복합 지표와 피라미딩 전략을 결합한 자동 매매 시스템</p>
     </header>
 
     <main>
         <section class="project-detail">
             <h2>프로젝트 개요</h2>
-            <p>볼린저밴드와 스토캐스틱 오실레이터를 조합하여 시장의 변동성과 과매수/과매도 구간을 동시에 분석하고, 자동으로 매매를 실행하는 전략 스크립트입니다.</p>
+            <p>
+                이 프로젝트는 볼린저밴드와 스토캐스틱 오실레이터의 복합적인 신호에 기반하여, 특정 조건을 만족할 때마다 추가로 포지션을 진입하는 **피라미딩(Pyramiding)** 전략을 적용한 자동 매매 시스템입니다. 시장의 변동성을 활용하여 안정적으로 포지션을 구축하고 관리하도록 설계되었습니다.
+            </p>
             
             <h2>주요 기능</h2>
             <ul>
-                <li>볼린저밴드 이탈 및 회귀 시 자동 매매 신호 포착</li>
-                <li>스토캐스틱 지표를 활용한 매매 시점 필터링</li>
+                <li>볼린저밴드와 스토캐스틱을 활용한 복합 신호 포착</li>
+                <li>조건을 만족하는 시점마다 분할 매수하는 피라미딩 전략 적용</li>
+                <li>목표 수익률 도달 시 포지션 전체 청산 기능</li>
                 <li>백테스팅을 통한 전략 성과 분석 기능</li>
             </ul>
 
             <h2>개발 과정</h2>
-            <p>과거 데이터를 기반으로 한 백테스팅을 통해 전략의 효율성을 검증하고, 파인스크립트의 전략 테스트 기능을 활용하여 최적의 매개변수 값을 찾아냈습니다.</p>
+            <p>
+                진입 신호의 정확도를 높이기 위해 여러 지표를 결합하고, 단순 진입이 아닌 피라미딩을 통해 리스크를 분산하며 평균 매수 단가를 유리하게 만드는 전략을 구현했습니다. 과거 데이터를 기반으로 한 백테스팅을 통해 전략의 효율성을 검증했습니다.
+            </p>
 
             <h2>미리보기</h2>
             <p>
-                <img src="img/project3_img.png" alt="볼린저밴드와 스토캐스틱 자동 매매 시스템 이미지" class="zoomable-image">
+                <img src="img/project3_img.png" alt="복합 지표와 피라미딩 전략 자동 매매 시스템 이미지" class="zoomable-image">
+            </p>
+            <p>
+                <a href="#" class="download-button" data-file="scripts/project3_script.txt">스크립트 다운받기</a>
             </p>
         </section>
     </main>
@@ -40,7 +48,7 @@
     </footer>
 
     <a href="index.html" class="home-button">HOME</a>
-    <a href="mailto:your-email@example.com" class="fixed-contact-button" target="_blank" rel="noopener noreferrer">
+    <a href="mailto:tradingfactory777@gmail.com" class="fixed-contact-button" target="_blank" rel="noopener noreferrer">
         문의하기
     </a>
 
