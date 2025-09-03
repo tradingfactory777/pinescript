@@ -1,0 +1,46 @@
+// This Pine Script® code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © TradingFactory_
+
+//@version=6
+indicator("supertrend flow", overlay = true)
+import TradingView/ta/10
+
+[supertrend, dir] = ta.supertrend(3, 10)
+
+var float low_price = na
+var float low_price2 = na
+bool entry = false
+
+if dir[1] < 0 and dir > 0
+    low_price := low
+
+if dir < 0 and dir[1] > 0
+    if low_price2 < low_price
+        entry := true
+    low_price2 := low_price
+    low_price := na
+
+if low_price > low
+    low_price := low
+
+var float high_price = na
+var float high_price2 = na
+bool entry2 = false
+
+if dir[1] > 0 and dir < 0
+    high_price := high
+
+if dir > 0 and dir[1] < 0
+    if high_price2 > high_price
+        entry2 := true
+    high_price2 := high_price
+    high_price := na
+
+if high_price < high
+    high_price := high
+
+//plot
+plot(dir < 0 ? supertrend : na, color = color.teal, style = plot.style_linebr)
+plot(dir > 0 ? supertrend : na, color = color.red, style = plot.style_linebr)
+plotshape(entry, style = shape.diamond, size = size.tiny, color = color.teal, location=location.belowbar)
+plotshape(entry2, style = shape.diamond, size = size.tiny, color = color.red, location=location.belowbar)

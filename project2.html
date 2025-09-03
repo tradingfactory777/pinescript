@@ -4,33 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>프로젝트 2 상세 | 파인스크립트 제작 서비스</title>
-    <meta name="description" content="특정 패턴 발생 시 알림을 제공하는 전략 스크립트 상세 설명. 복잡한 시장 패턴을 놓치지 않도록 도와주는 맞춤형 솔루션입니다.">
+    <meta name="description" content="슈퍼트렌드와 추세 반전 패턴(상승 저점, 하락 고점)을 결합해 매수/매도 신호를 포착하는 지표입니다.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>프로젝트 2</h1>
-        <p>특정 패턴 발생 시 알림을 제공하는 전략 스크립트</p>
+        <p>슈퍼트렌드와 추세 반전 패턴을 활용한 매수/매도 지표</p>
     </header>
 
     <main>
         <section class="project-detail">
             <h2>프로젝트 개요</h2>
-            <p>이 프로젝트는 매매에 중요한 특정 캔들 패턴이나 지표 조합이 나타났을 때 즉시 알림을 제공하여, 트레이더가 신속하게 시장 변화에 대응할 수 있도록 돕습니다.</p>
+            <p>
+                이 프로젝트는 시장의 추세 방향을 나타내는 슈퍼트렌드 지표를 기반으로, 상승하는 저점(Higher Low)과 하락하는 고점(Lower High)과 같은 핵심 추세 반전 패턴을 포착하여 매수/매도 신호를 제공하는 지표입니다.
+            </p>
             
             <h2>주요 기능</h2>
             <ul>
-                <li>해머, 도지 등 특정 캔들 패턴 발생 시 알림</li>
-                <li>두 개 이상의 지표가 특정 조건을 충족할 때 알림</li>
-                <li>자동 알림(팝업, 이메일, 모바일 푸시 알림) 설정 기능</li>
+                <li>슈퍼트렌드 지표를 활용한 추세 방향 자동 감지</li>
+                <li>매수 신호: 추세 전환 시 '상승하는 저점(Higher Low)' 패턴 포착</li>
+                <li>매도 신호: 추세 전환 시 '하락하는 고점(Lower High)' 패턴 포착</li>
+                <li>매수 신호는 청록색, 매도 신호는 빨간색 다이아몬드로 표시</li>
             </ul>
 
             <h2>개발 과정</h2>
-            <p>고객과의 긴밀한 협의를 통해 매매에 사용하는 패턴을 정확히 정의하고, 트레이딩뷰의 알림 시스템과 연동하여 안정적으로 작동하도록 개발했습니다.</p>
+            <p>
+                단순한 추세선 돌파 신호의 한계를 극복하기 위해 가격 움직임의 특성(Higher Low, Lower High)을 결합하여 신호의 신뢰도를 높였습니다. 이를 통해 불필요한 진입을 줄이고 더 정교한 매매 결정을 내릴 수 있도록 돕습니다.
+            </p>
 
             <h2>미리보기</h2>
             <p>
-                <img src="img/project2_img.png" alt="특정 패턴 알림 지표 이미지" class="zoomable-image">
+                <img src="img/project2_img.png" alt="프로젝트 2 미리보기 이미지" class="zoomable-image">
+            </p>
+            <p>
+                <a href="#" class="download-button" data-file="scripts/project2_script.txt">스크립트 다운받기</a>
             </p>
         </section>
     </main>
@@ -40,7 +48,7 @@
     </footer>
 
     <a href="index.html" class="home-button">HOME</a>
-    <a href="mailto:your-email@example.com" class="fixed-contact-button" target="_blank" rel="noopener noreferrer">
+    <a href="mailto:tradingfactory777@gmail.com" class="fixed-contact-button" target="_blank" rel="noopener noreferrer">
         문의하기
     </a>
 
@@ -48,7 +56,7 @@
         <span class="close-button">&times;</span>
         <img class="popup-content" id="popup-image" src="" alt="">
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
